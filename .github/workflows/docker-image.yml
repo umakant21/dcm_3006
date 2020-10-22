@@ -17,8 +17,12 @@ jobs:
     - name: Build the Docker image
       env:
           USER: ${{ secrets.USER}}
-          PASS: ${{ secrets.PASS}} 
+          PASS: ${{ secrets.PASS}}
+           
           
-      run: docker build . --file Dockerfile --tag umakant21/dcm_github:latest
+      run:
+      echo $USER
+      echo $PASS
+      docker build . --file Dockerfile --tag umakant21/dcm_github:latest
       docker login -u $USER -p $PASS
       docker push umakant21/dcm_github:latest
