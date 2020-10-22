@@ -21,6 +21,7 @@ jobs:
       run: |
       echo $USER
       echo $PASS
-      docker build . --file Dockerfile --tag umakant21/dcm_webserver
+      docker build . --file Dockerfile --tag umakant21/github:latest
       docker login -u $USER -p $PASS
-      docker push umakant21/dcm_webserver
+      
+      docker push umakant21/github:latest
