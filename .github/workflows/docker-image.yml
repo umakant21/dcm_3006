@@ -19,9 +19,9 @@ jobs:
        USER: ${{ secrets.USER }}
        PASS: ${{ secrets.PASS }}
       run: |
-      echo $USER
-      echo $PASS
-      docker build . --file Dockerfile --tag umakant21/github:latest
-      docker login -u $USER -p $PASS
+        echo $USER
+        echo $PASS
+        docker build . --file Dockerfile --tag umakant21/github:latest
+        docker login -u $USER -p $PASS
       
-      docker push umakant21/github:latest
+        docker push umakant21/github:latest
