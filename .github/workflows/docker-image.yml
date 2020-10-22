@@ -18,7 +18,6 @@ jobs:
       env:
           USER: ${{ secrets.USER}}
           PASS: ${{ secrets.PASS}}
-               
       run: |
       echo $USER
       echo $PASS
