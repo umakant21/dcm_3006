@@ -18,9 +18,8 @@ jobs:
       env:
           USER: ${{ secrets.USER}}
           PASS: ${{ secrets.PASS}}
-           
-          
-      run:
+               
+      run: |
       echo $USER
       echo $PASS
       docker build . --file Dockerfile --tag umakant21/dcm_github:latest
